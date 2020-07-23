@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
         }
 
 
-        animator.SetBool("New Bool", isGrounded);
+        animator.SetBool("Grounded", isGrounded);
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Dead" && !isDead)
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
 
    private void Die() {
         // 사망 처리 
-        animator.SetTrigger("New Trigger");
+        animator.SetTrigger("Die");
 
         playerAudio.clip = deathClip;
 
